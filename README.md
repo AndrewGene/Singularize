@@ -13,10 +13,10 @@ let plural = "cities"
 let matching = singularize.isMatch(left:singular,right:plural) //returns true
 ```
 
+It will simply bring both words down to the singular form, lower case them, then check to see if they are equal.  Left and Right parameters are used because the order of singular and plural doesn't matter.
+
 ## Installing
 Drag-and-drop **Singularize.swift** into your project.
-
-It will simply bring both words down to the singular form, lower case them, then check to see if they are equal.  Left and Right parameters are used because the order of singular and plural doesn't matter.
 
 ## isValidWord(word:String)->Bool
 ```swift
