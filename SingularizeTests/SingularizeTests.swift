@@ -122,6 +122,16 @@ class SingularizeTests: XCTestCase {
         XCTAssertFalse(singularize.isValidWord(word: word))
     }
     
+    func testRemovePluralization() {
+        let word = "cities"
+        XCTAssertEqual("city", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationIrregular() {
+        let word = "children"
+        XCTAssertEqual("child", singularize.removePluralization(word: word))
+    }
+    
     /*func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
