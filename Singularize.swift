@@ -53,8 +53,7 @@ class Singularize{
         return word
     }
     
-    func isPluralDifferent(word:String)->Bool{
-        
+    func isPluralDifferent(word:String)->Bool{        
         return unchangeables.filter({$0 == word}).count == 0
     }
     

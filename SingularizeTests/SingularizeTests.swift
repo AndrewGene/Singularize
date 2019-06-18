@@ -112,6 +112,16 @@ class SingularizeTests: XCTestCase {
         XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
     }
     
+    func testIsValidWord() {
+        let word = "cat"
+        XCTAssertTrue(singularize.isValidWord(word: word))
+    }
+    
+    func testIsInvalidWord() {
+        let word = "catz"
+        XCTAssertFalse(singularize.isValidWord(word: word))
+    }
+    
     /*func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
