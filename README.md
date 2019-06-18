@@ -53,5 +53,6 @@ irregular = singularize.isIrregular(word:word) //returns true because the plural
 Please consider making a pull request if you would like to help with localization.  Unfortunately, I only speak English.  Where possible, please add unit tests along with your PR.  Thanks.
 
 # TODOs
+- [ ] Update to Swift 5
 - [ ] Add more irregular nouns
 - [ ] Get help to add localizations
