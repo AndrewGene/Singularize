@@ -42,8 +42,6 @@ class Singularize{
         return misspelledRange.location == NSNotFound
     }
     
-    
-    
     func isIrregular(word:String)->Bool{
         return irregularNouns.filter({$0.singular == word || $0.plural == word}).count > 0
     }
