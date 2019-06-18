@@ -13,6 +13,9 @@ let plural = "cities"
 let matching = singularize.isMatch(left:singular,right:plural) //returns true
 ```
 
+## Installing
+Drag-and-drop Singularize.swift into your project.
+
 It will simply bring both words down to the singular form, lower case them, then check to see if they are equal.  Left and Right parameters are used because the order of singular and plural doesn't matter.
 
 ## isValidWord(word:String)->Bool
@@ -54,5 +57,7 @@ Please consider making a pull request if you would like to help with localizatio
 
 # TODOs
 - [ ] Update to Swift 5
+- [ ] Add Cocoapods support
+- [ ] Add Swift Package Manager support
 - [ ] Add more irregular nouns
 - [ ] Get help to add localizations
