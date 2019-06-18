@@ -13,6 +13,7 @@
 		AAA0D5F122B968D800FCAD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA0D5F022B968D800FCAD94 /* Assets.xcassets */; };
 		AAA0D5F422B968D800FCAD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA0D5F222B968D800FCAD94 /* LaunchScreen.storyboard */; };
 		AAA0D5FF22B968D800FCAD94 /* SingularizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0D5FE22B968D800FCAD94 /* SingularizeTests.swift */; };
+		AAA0D60A22B968ED00FCAD94 /* Singularize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0D60922B968ED00FCAD94 /* Singularize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		AAA0D5FA22B968D800FCAD94 /* SingularizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingularizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA0D5FE22B968D800FCAD94 /* SingularizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingularizeTests.swift; sourceTree = "<group>"; };
 		AAA0D60022B968D800FCAD94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA0D60922B968ED00FCAD94 /* Singularize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singularize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		AAA0D5DD22B968D500FCAD94 = {
 			isa = PBXGroup;
 			children = (
+				AAA0D60922B968ED00FCAD94 /* Singularize.swift */,
 				AAA0D5E822B968D500FCAD94 /* Singularize */,
 				AAA0D5FD22B968D800FCAD94 /* SingularizeTests */,
 				AAA0D5E722B968D500FCAD94 /* Products */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA0D60A22B968ED00FCAD94 /* Singularize.swift in Sources */,
 				AAA0D5EC22B968D500FCAD94 /* ViewController.swift in Sources */,
 				AAA0D5EA22B968D500FCAD94 /* AppDelegate.swift in Sources */,
 			);

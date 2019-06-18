@@ -13,6 +13,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let singularize = Singularize()
+        
+        let singular = "city"
+        
+        let plural = "cities"
+        
+        let matching = singularize.isMatch(left:singular,right:plural)
+        
+        let isWord = singularize.isValidWord(word: plural)
+        
+        print(isWord)
+        
+        print(matching)
     }
 
 

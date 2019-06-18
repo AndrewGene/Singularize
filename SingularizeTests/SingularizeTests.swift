@@ -11,24 +11,112 @@ import XCTest
 
 class SingularizeTests: XCTestCase {
 
+    var singularize = Singularize()
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTwoSingular() {
+        let singular = "wolf"
+        let plural = "wolf"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
     }
-
-    func testPerformanceExample() {
+    
+    func testTwoPlural() {
+        let singular = "wolves"
+        let plural = "wolves"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testNonChanging() {
+        let singular = "deer"
+        let plural = "deer"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testIrregular() {
+        let singular = "child"
+        let plural = "children"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testIncorrect() {
+        let singular = "child"
+        let plural = "childrens"
+        XCTAssertFalse(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixAToON() {
+        let singular = "phenomenon"
+        let plural = "phenomena"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixIToUS() {
+        let singular = "cactus"
+        let plural = "cacti"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixIESToY() {
+        let singular = "city"
+        let plural = "cities"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixVESToF() {
+        let singular = "wolf"
+        let plural = "wolves"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixVESToFE() {
+        let singular = "wife"
+        let plural = "wives"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixESToO() {
+        let singular = "potato"
+        let plural = "potatoes"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixESToIS() {
+        let singular = "analysis"
+        let plural = "analyses"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixES() {
+        let singular = "bus"
+        let plural = "buses"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixESDoubleSorZ() {
+        let singular = "truss"
+        let plural = "trusses"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    func testSuffixS() {
+        let singular = "cat"
+        let plural = "cats"
+        XCTAssertTrue(singularize.isMatch(left: singular, right: plural))
+    }
+    
+    /*func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
-    }
+    }*/
 
 }
