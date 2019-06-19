@@ -77,20 +77,20 @@ class Singularize{
                 else if word.hasSuffix("ves"){
                     let no_ves = "\(word.dropLast(3))"
                     
-                    var fword = no_ves + "f"
+                    var ends_f_fe = no_ves + "f"
                     var isGood = false
-                    if isValidWord(word: fword){ //wolves => wolf
+                    if isValidWord(word: ends_f_fe){ //wolves => wolf
                         isGood = true
                     }
                     else{
-                        fword = fword + "e"
-                        if isValidWord(word: fword){ //wives => wife
+                        ends_f_fe = ends_f_fe + "e"
+                        if isValidWord(word: ends_f_fe){ //wives => wife
                             isGood = true
                         }
                     }
                     
                     if isGood{
-                        return fword
+                        return ends_f_fe
                     }
                 }
                 else if word.hasSuffix("es"){
