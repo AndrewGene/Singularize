@@ -132,6 +132,68 @@ class SingularizeTests: XCTestCase {
         XCTAssertEqual("child", singularize.removePluralization(word: word))
     }
     
+    func testRemovePluralizationForDoubleS() {
+        let word = "gasses"
+        XCTAssertEqual("gas", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationAToOn() {
+        let word = "phenomena"
+        XCTAssertEqual("phenomenon", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationESWithSH() {
+        let word = "marshes"
+        XCTAssertEqual("marsh", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationESWithCH() {
+        let word = "lunches"
+        XCTAssertEqual("lunch", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationESWithX() {
+        let word = "taxes"
+        XCTAssertEqual("tax", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationESWithZ() {
+        let word = "blitzes"
+        XCTAssertEqual("blitz", singularize.removePluralization(word: word))
+    }
+    
+    func testIsMatchForFalseSRemoval() {
+        let singular = "gas"
+        let plural = "gasses"
+        XCTAssertTrue(singularize.isMatch(left: plural, right: singular))
+    }
+    
+    func testIsMatchDifferentWords() {
+        let singular = "gas"
+        let plural = "bus"
+        XCTAssertFalse(singularize.isMatch(left: plural, right: singular))
+    }
+    
+    func testRemovePluralizationSuffixVESToFE() {
+        let word = "wives"
+        XCTAssertEqual("wife", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationSuffixVESToF() {
+        let word = "wolves"
+        XCTAssertEqual("wolf", singularize.removePluralization(word: word))
+    }
+    
+    func testHasSuffix(){
+        let word = "soccer"
+        XCTAssertTrue(word.hasSuffix("er"))
+    }
+    
+    func testDropLast(){
+        let word = "soccer"
+        XCTAssertEqual("socc", word.dropLast(2))
+    }
+    
     /*func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

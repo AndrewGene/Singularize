@@ -15,9 +15,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let singularize = Singularize()
         
-        let singular = "city"
+        let singular = "bell"
         
-        let plural = "cities"
+        let plural = "bells"
         
         let matching = singularize.isMatch(left:singular,right:plural)
         

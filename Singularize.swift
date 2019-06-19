@@ -18,7 +18,7 @@ class Singularize{
         setIrregularNouns()
     }
     
-    func setIrregularNouns(){
+    private func setIrregularNouns(){
         irregularNouns.append(IrregularNoun(singular: "child", plural: "children"))
         irregularNouns.append(IrregularNoun(singular: "goose", plural: "geese"))
         irregularNouns.append(IrregularNoun(singular: "man", plural: "men"))
@@ -67,43 +67,33 @@ class Singularize{
                 return getIrregularSingularForm(word: word)
             }
             else{
-                if word.hasSuffix("a"){
-                    //phenomena
-                    let no_a = "\(word.dropLast())"
-                    let on = no_a + "on"
-                    if isValidWord(word: on){
-                        return on
-                    }
-                }
-                if word.hasSuffix("i"){
-                    //cacti
-                    let no_i = "\(word.dropLast())"
-                    let us = no_i + "us"
-                    if isValidWord(word: us){
-                        return us
-                    }
-                }
-                if word.hasSuffix("ies"){
+                if word.hasSuffix("ies"){ //cities => city
                     let no_ies = "\(word.dropLast(3))"
                     let y = no_ies + "y"
                     if isValidWord(word: y){
                         return y
                     }
                 }
-                if word.hasSuffix("ves"){
+                else if word.hasSuffix("ves"){
                     let no_ves = "\(word.dropLast(3))"
-                    let f = no_ves + "f"
-                    if isValidWord(word: f){
-                        return f
+                    
+                    var fword = no_ves + "f"
+                    var isGood = false
+                    if isValidWord(word: fword){ //wolves => wolf
+                        isGood = true
                     }
                     else{
-                        let fe = f + "e"
-                        if isValidWord(word: fe){
-                            return fe
+                        fword = fword + "e"
+                        if isValidWord(word: fword){ //wives => wife
+                            isGood = true
                         }
                     }
+                    
+                    if isGood{
+                        return fword
+                    }
                 }
-                if word.hasSuffix("es"){
+                else if word.hasSuffix("es"){
                     let no_es = "\(word.dropLast(2))"
                     
                     //check for word ending in "o"
@@ -113,33 +103,41 @@ class Singularize{
                             return no_es
                         }
                     }
-                    
-                    
-                    //check for -s, -ss, -sh, -ch, -x, -z
-                    if no_es.hasSuffix("s") || no_es.hasSuffix("ss") || no_es.hasSuffix("sh") || no_es.hasSuffix("ch") || no_es.hasSuffix("x") || no_es.hasSuffix("z"){
+                    else if no_es.hasSuffix("s") || no_es.hasSuffix("ss") || no_es.hasSuffix("sh") || no_es.hasSuffix("ch") || no_es.hasSuffix("x") || no_es.hasSuffix("z"){ //check for -s, -ss, -sh, -ch, -x, -z
                         if isValidWord(word: no_es){
                             return no_es
                         }
-                        else{
-                            //check for double s or z
-                            if no_es.hasSuffix("ss") || no_es.hasSuffix("zz"){
-                                let noDouble = "\(no_es.dropLast())"
-                                if isValidWord(word: noDouble){
-                                    return noDouble
-                                }
+                        else if no_es.hasSuffix("ss") || no_es.hasSuffix("zz"){ //check for double ss or zz
+                            let noDouble = "\(no_es.dropLast())"
+                            if isValidWord(word: noDouble){
+                                return noDouble
                             }
                         }
                     }
-                    
                     
                     //check for word ending in "is"
                     let end_is = no_es + "is"
                     if isValidWord(word: end_is){
                         return end_is
                     }
-                    
                 }
-                if word.hasSuffix("s"){
+                else if word.hasSuffix("a"){
+                    //phenomena
+                    let no_a = "\(word.dropLast())"
+                    let on = no_a + "on"
+                    if isValidWord(word: on){
+                        return on
+                    }
+                }
+                else if word.hasSuffix("i"){
+                    //cacti
+                    let no_i = "\(word.dropLast())"
+                    let us = no_i + "us"
+                    if isValidWord(word: us){
+                        return us
+                    }
+                }
+                else if word.hasSuffix("s"){
                     let no_s = "\(word.dropLast())"
                     if isValidWord(word: no_s){
                         return no_s
