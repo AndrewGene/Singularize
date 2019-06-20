@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class Singularize{
-    let unchangeables = ["sheep","series","species","deer","moose","swine","bison","corps","means","scissors","trout","aircraft","watercraft","hovercraft","spacecraft"]
+    let unchangeables = ["sheep","series","species","deer","moose","swine","bison","corps","means","scissors","trout","aircraft","watercraft","hovercraft","spacecraft","faux pas","grouse","offspring","ox","salmon","shrimp","tuna"]
     
     var irregularNouns = [IrregularNoun]()
     
@@ -32,6 +32,37 @@ class Singularize{
         irregularNouns.append(IrregularNoun(singular: "ox", plural: "oxen"))
         irregularNouns.append(IrregularNoun(singular: "louse", plural: "lice"))
         irregularNouns.append(IrregularNoun(singular: "die", plural: "dice"))
+        irregularNouns.append(IrregularNoun(singular: "addendum", plural: "addenda"))
+        irregularNouns.append(IrregularNoun(singular: "bacterium", plural: "bacteria"))
+        irregularNouns.append(IrregularNoun(singular: "beau", plural: "beaux"))
+        irregularNouns.append(IrregularNoun(singular: "bureau", plural: "bureaux"))
+        irregularNouns.append(IrregularNoun(singular: "chateau", plural: "chateaux"))
+        irregularNouns.append(IrregularNoun(singular: "codex", plural: "codices"))
+        irregularNouns.append(IrregularNoun(singular: "concerto", plural: "concerti"))
+        irregularNouns.append(IrregularNoun(singular: "corpus", plural: "corpora"))
+        irregularNouns.append(IrregularNoun(singular: "erratum", plural: "errata"))
+        irregularNouns.append(IrregularNoun(singular: "formula", plural: "formulae"))
+        irregularNouns.append(IrregularNoun(singular: "genus", plural: "genera"))
+        irregularNouns.append(IrregularNoun(singular: "graffito", plural: "graffiti"))
+        irregularNouns.append(IrregularNoun(singular: "larva", plural: "larvae"))
+        irregularNouns.append(IrregularNoun(singular: "libretto", plural: "libretti"))
+        irregularNouns.append(IrregularNoun(singular: "die", plural: "dice"))
+        irregularNouns.append(IrregularNoun(singular: "matrix", plural: "matrices"))
+        irregularNouns.append(IrregularNoun(singular: "medium", plural: "media"))
+        irregularNouns.append(IrregularNoun(singular: "memorandum", plural: "memoranda"))
+        irregularNouns.append(IrregularNoun(singular: "minutia", plural: "minutiae"))
+        irregularNouns.append(IrregularNoun(singular: "nebula", plural: "nebulae"))
+        irregularNouns.append(IrregularNoun(singular: "opus", plural: "opera"))
+        irregularNouns.append(IrregularNoun(singular: "ovum", plural: "ova"))
+        irregularNouns.append(IrregularNoun(singular: "phylum", plural: "phyla"))
+        irregularNouns.append(IrregularNoun(singular: "referendum", plural: "referenda"))
+        irregularNouns.append(IrregularNoun(singular: "stratum", plural: "strata"))
+        irregularNouns.append(IrregularNoun(singular: "symposium", plural: "symposia"))
+        irregularNouns.append(IrregularNoun(singular: "tableau", plural: "tableaux"))
+        irregularNouns.append(IrregularNoun(singular: "vertebra", plural: "vertebrae"))
+        irregularNouns.append(IrregularNoun(singular: "vertex", plural: "vertices"))
+        irregularNouns.append(IrregularNoun(singular: "vita", plural: "vitae"))
+        irregularNouns.append(IrregularNoun(singular: "vortex", plural: "vortices"))
     }
     
     func isValidWord(word:String)->Bool{
