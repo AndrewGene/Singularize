@@ -90,6 +90,12 @@ class Singularize{
     
     func removePluralization(word:String) -> String{
         
+        guard word.count > 1 else { return word } //must not be a single letter
+        
+        if word.count == 2 && !word.hasSuffix("s"){
+            return word
+        }
+        
         let word = word.lowercased()
         
         if isPluralDifferent(word: word){

@@ -224,6 +224,16 @@ class SingularizeTests: XCTestCase {
         XCTAssertFalse(singularize.isPossiblePlural(word: word))
     }
     
+    func testRemovePluralizationSingleLetter() {
+        let word = "I"
+        XCTAssertEqual("I", singularize.removePluralization(word: word))
+    }
+    
+    func testRemovePluralizationTwoLettersSuffixNotS() {
+        let word = "ox"
+        XCTAssertEqual("ox", singularize.removePluralization(word: word))
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
