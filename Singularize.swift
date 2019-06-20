@@ -168,7 +168,7 @@ class Singularize{
                         return us
                     }
                 }
-                else if word.hasSuffix("s"){
+                if word.hasSuffix("s"){
                     let no_s = "\(word.dropLast())"
                     if isValidWord(word: no_s){
                         return no_s

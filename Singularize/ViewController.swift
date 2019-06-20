@@ -15,11 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let singularize = Singularize()
         
-        let singular = "bell"
+        //let singular = "grapes"
         
-        let plural = "bells"
+        let plural = "grapes"
         
-        let matching = singularize.isMatch(left:singular,right:plural)
+        let matching = singularize.removePluralization(word: plural)
         
         let isWord = singularize.isValidWord(word: plural)
         
