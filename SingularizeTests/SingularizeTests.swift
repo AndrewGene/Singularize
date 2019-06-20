@@ -194,11 +194,43 @@ class SingularizeTests: XCTestCase {
         XCTAssertEqual("socc", word.dropLast(2))
     }
     
-    /*func testPerformanceExample() {
+    func testIsPossiblePluralIrregular(){
+        let word = "children"
+        XCTAssertTrue(singularize.isPossiblePlural(word: word))
+    }
+    
+    func testIsPossiblePluralUncountable(){
+        let word = "species"
+        XCTAssertTrue(singularize.isPossiblePlural(word: word))
+    }
+    
+    func testIsPossiblePluralSuffixS(){
+        let word = "plants"
+        XCTAssertTrue(singularize.isPossiblePlural(word: word))
+    }
+    
+    func testIsPossiblePluralSuffixA(){
+        let word = "phenomena"
+        XCTAssertTrue(singularize.isPossiblePlural(word: word))
+    }
+    
+    func testIsPossiblePluralSuffixI(){
+        let word = "cacti"
+        XCTAssertTrue(singularize.isPossiblePlural(word: word))
+    }
+    
+    func testIsPossiblePluralNot(){
+        let word = "trix"
+        XCTAssertFalse(singularize.isPossiblePlural(word: word))
+    }
+    
+    func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            let word = "wolves"
+            let _ = singularize.removePluralization(word: word)
         }
-    }*/
+    }
 
 }

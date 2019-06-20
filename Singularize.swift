@@ -180,6 +180,22 @@ class Singularize{
         return word
     }
     
+    func isPossiblePlural(word:String)->Bool{
+        if isIrregular(word: word){
+           return true
+        }
+        
+        if unchangeables.contains(word){
+            return true
+        }
+        
+        if word.hasSuffix("s") || word.hasSuffix("a") || word.hasSuffix("i"){
+            return true
+        }
+        
+        return false
+    }
+    
     func isMatch(left:String, right:String)->Bool{
         
         guard isValidWord(word: left) && isValidWord(word: right) else { return false }
