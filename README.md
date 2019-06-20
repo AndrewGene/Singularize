@@ -57,8 +57,8 @@ Please consider making a pull request if you would like to help with localizatio
 
 # TODOs
 - [x] ~~100% Code Coverage~~
-- [x] Update to Swift 5
-- [x] Add more irregular nouns
+- [x] ~~Update to Swift 5~~
+- [x] ~~Add more irregular nouns~~
 - [ ] Add Cocoapods support
 - [ ] Add Swift Package Manager support
 - [ ] Get help to add localizations
