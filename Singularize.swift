@@ -27,7 +27,7 @@ class Singularize{
         irregularNouns.append(IrregularNoun(singular: "foot", plural: "feet"))
         irregularNouns.append(IrregularNoun(singular: "mouse", plural: "mice"))
         irregularNouns.append(IrregularNoun(singular: "person", plural: "people"))
-        irregularNouns.append(IrregularNoun(singular: "data", plural: "datum"))
+        irregularNouns.append(IrregularNoun(singular: "datum", plural: "data"))
         irregularNouns.append(IrregularNoun(singular: "appendix", plural: "appendices"))
         irregularNouns.append(IrregularNoun(singular: "ox", plural: "oxen"))
         irregularNouns.append(IrregularNoun(singular: "louse", plural: "lice"))
