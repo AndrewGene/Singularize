@@ -15,6 +15,9 @@ let matching = singularize.isMatch(left:singular,right:plural) //returns true
 
 It will simply bring both words down to the singular form, lower case them, then check to see if they are equal.  Left and Right parameters are used because the order of singular and plural doesn't matter.
 
+## Installing
+Drag-and-drop **Singularize.swift** into your project.
+
 ## isValidWord(word:String)->Bool
 ```swift
 let singularize = Singularize()
@@ -48,3 +51,14 @@ word = "child"
         
 irregular = singularize.isIrregular(word:word) //returns true because the plural version is irregular
 ```
+
+# How you can help
+Please consider making a pull request if you would like to help with localization.  Unfortunately, I only speak English.  Where possible, please add unit tests along with your PR.  Thanks.
+
+# TODOs
+- [x] ~~100% Code Coverage~~
+- [ ] Update to Swift 5
+- [ ] Add Cocoapods support
+- [ ] Add Swift Package Manager support
+- [ ] Add more irregular nouns
+- [ ] Get help to add localizations
