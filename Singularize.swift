@@ -90,11 +90,7 @@ class Singularize{
     
     func removePluralization(word:String) -> String{
         
-        guard word.count > 1 else { return word } //must not be a single letter
-        
-        if word.count == 2 && !word.hasSuffix("s"){
-            return word
-        }
+        guard isPossiblePlural(word: word) else { return word }
         
         let word = word.lowercased()
         
@@ -187,8 +183,15 @@ class Singularize{
     }
     
     func isPossiblePlural(word:String)->Bool{
+        
+        guard word.count > 1 else { return false } //must not be a single letter
+        
+        if word.count == 2 && !word.hasSuffix("s"){
+            return false
+        }
+        
         if isIrregular(word: word){
-           return true
+            return true
         }
         
         if unchangeables.contains(word){
